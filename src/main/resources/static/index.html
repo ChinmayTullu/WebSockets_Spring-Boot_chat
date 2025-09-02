@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raw WebSocket Chat</title>
+    <style>
+        #status { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .connected { background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+        .disconnected { background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+        .connecting { background-color: #fff3cd; border: 1px solid #ffeaa7; color: #856404; }
+    </style>
+</head>
+<body>
+    <h2>WebSocket Chat</h2>
+    <div id="status" class="disconnected">Status: Disconnected</div>
+    <input type="text" id="message" placeholder="Type a message" disabled/>
+    <button id="sendBtn" onclick="sendMessage()" disabled>Send</button>
+    <button onclick="reconnect()">Reconnect</button>
+    <ul id="chat"></ul>
+
+    <script>
+        var ws = null;
+        var statusDiv = document.getElementById("status");
+        var messageInput = document.getElementById("message");
+        var sendBtn = document.getElementById("sendBtn");
+
+        function updateStatus(status, className) {
+            statusDiv.textContent = "Status: " + status;
+            statusDiv.className = className;
+        }
+
+        function connect() {
+            updateStatus("Connecting...", "connecting");
+            
+            try {
+                ws = new WebSocket("ws://localhost:8080/ws/chat");
+
+                ws.onopen = function() {
+                    console.log("Connected to server");
+                    updateStatus("Connected", "connected");
+                    messageInput.disabled = false;
+                    sendBtn.disabled = false;
+                    addMessage("<strong>Connected to chat server</strong>");
+                };
+
+                ws.onmessage = function(event) {
+                    console.log("Message received:", event.data);
+                    addMessage(event.data);
+                };
+
+                ws.onclose = function(event) {
+                    console.log("Disconnected from server. Code:", event.code, "Reason:", event.reason);
+                    updateStatus("Disconnected (Code: " + event.code + ")", "disconnected");
+                    messageInput.disabled = true;
+                    sendBtn.disabled = true;
+                    addMessage("<strong>Disconnected from server</strong>");
+                };
+
+                ws.onerror = function(error) {
+                    console.error("WebSocket error:", error);
+                    updateStatus("Connection Error", "disconnected");
+                    addMessage("<strong>Connection error occurred</strong>");
+                };
+            } catch (error) {
+                console.error("Failed to create WebSocket:", error);
+                updateStatus("Failed to Connect", "disconnected");
+                addMessage("<strong>Failed to create WebSocket connection: " + error.message + "</strong>");
+            }
+        }
+
+        function addMessage(message) {
+            var li = document.createElement("li");
+            li.innerHTML = message;
+            document.getElementById("chat").appendChild(li);
+        }
+
+        function sendMessage() {
+            var msg = messageInput.value.trim();
+            if (msg && ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(msg);
+                messageInput.value = "";
+            } else if (!ws || ws.readyState !== WebSocket.OPEN) {
+                alert("WebSocket is not connected. Current state: " + (ws ? ws.readyState : "null"));
+            }
+        }
+
+        function reconnect() {
+            if (ws) {
+                ws.close();
+            }
+            connect();
+        }
+
+        // Add Enter key support
+        messageInput.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+        });
+
+        // Connect on page load
+        connect();
+    </script>
+</body>
+</html>

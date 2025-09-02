@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Test</title>
+</head>
+<body>
+    <h2>WebSocket Connection Test</h2>
+    <div id="log"></div>
+    
+    <script>
+        function log(message) {
+            const logDiv = document.getElementById('log');
+            logDiv.innerHTML += '<p>' + new Date().toLocaleTimeString() + ': ' + message + '</p>';
+            console.log(message);
+        }
+        
+        log('Starting WebSocket connection test...');
+        log('Attempting to connect to: ws://localhost:8080/ws/chat');
+        
+        try {
+            const ws = new WebSocket('ws://localhost:8080/ws/chat');
+            
+            ws.onopen = function(event) {
+                log('✅ WebSocket connection opened successfully!');
+                log('Connection state: ' + ws.readyState);
+                
+                // Send a test message
+                setTimeout(() => {
+                    ws.send('Test message from browser');
+                    log('📤 Sent test message');
+                }, 1000);
+            };
+            
+            ws.onmessage = function(event) {
+                log('📨 Received message: ' + event.data);
+            };
+            
+            ws.onclose = function(event) {
+                log('❌ WebSocket connection closed');
+                log('Close code: ' + event.code);
+                log('Close reason: ' + event.reason);
+                log('Was clean: ' + event.wasClean);
+            };
+            
+            ws.onerror = function(error) {
+                log('💥 WebSocket error occurred');
+                log('Error: ' + JSON.stringify(error));
+            };
+            
+            // Check connection state after a delay
+            setTimeout(() => {
+                log('Connection state after 2 seconds: ' + ws.readyState);
+                log('States: 0=CONNECTING, 1=OPEN, 2=CLOSING, 3=CLOSED');
+            }, 2000);
+            
+        } catch (error) {
+            log('💥 Failed to create WebSocket: ' + error.message);
+        }
+    </script>
+</body>
+</html>

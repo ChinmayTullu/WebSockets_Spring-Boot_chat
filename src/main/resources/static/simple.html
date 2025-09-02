@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple WebSocket Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #messages { 
+            border: 1px solid #ccc; 
+            height: 300px; 
+            overflow-y: scroll; 
+            padding: 10px; 
+            margin: 10px 0; 
+        }
+        input, button { 
+            padding: 5px; 
+            margin: 5px; 
+        }
+        #status { 
+            font-weight: bold; 
+            margin: 10px 0;
+        }
+        .connected { color: green; }
+        .disconnected { color: red; }
+        .error { color: orange; }
+    </style>
+</head>
+<body>
+    <h1>Simple WebSocket Chat Test</h1>
+    
+    <div id="status" class="disconnected">Disconnected</div>
+    
+    <button id="connectBtn">Connect</button>
+    <button id="disconnectBtn" disabled>Disconnect</button>
+    
+    <div id="messages"></div>
+    
+    <input type="text" id="messageInput" placeholder="Type your message..." disabled>
+    <button id="sendBtn" disabled>Send</button>
+
+    <script>
+        let socket = null;
+        const status = document.getElementById('status');
+        const messages = document.getElementById('messages');
+        const messageInput = document.getElementById('messageInput');
+        const connectBtn = document.getElementById('connectBtn');
+        const disconnectBtn = document.getElementById('disconnectBtn');
+        const sendBtn = document.getElementById('sendBtn');
+        
+        function log(message) {
+            console.log(message);
+            const div = document.createElement('div');
+            div.textContent = new Date().toLocaleTimeString() + ' - ' + message;
+            messages.appendChild(div);
+            messages.scrollTop = messages.scrollHeight;
+        }
+        
+        function updateStatus(text, className) {
+            status.textContent = text;
+            status.className = className;
+        }
+        
+        function connect() {
+            try {
+                log('Attempting to connect to ws://localhost:8080/ws/chat');
+                socket = new WebSocket('ws://localhost:8080/ws/chat');
+                
+                socket.onopen = function(event) {
+                    log('WebSocket connection opened');
+                    updateStatus('Connected', 'connected');
+                    connectBtn.disabled = true;
+                    disconnectBtn.disabled = false;
+                    messageInput.disabled = false;
+                    sendBtn.disabled = false;
+                };
+                
+                socket.onmessage = function(event) {
+                    log('Received: ' + event.data);
+                };
+                
+                socket.onclose = function(event) {
+                    log('WebSocket connection closed. Code: ' + event.code + ', Reason: ' + event.reason);
+                    updateStatus('Disconnected (Code: ' + event.code + ')', 'disconnected');
+                    connectBtn.disabled = false;
+                    disconnectBtn.disabled = true;
+                    messageInput.disabled = true;
+                    sendBtn.disabled = true;
+                };
+                
+                socket.onerror = function(error) {
+                    log('WebSocket error: ' + error);
+                    updateStatus('Error occurred', 'error');
+                };
+                
+            } catch (e) {
+                log('Failed to create WebSocket: ' + e.message);
+                updateStatus('Failed to connect', 'error');
+            }
+        }
+        
+        function disconnect() {
+            if (socket) {
+                socket.close();
+            }
+        }
+        
+        function sendMessage() {
+            if (socket && socket.readyState === WebSocket.OPEN) {
+                const message = messageInput.value.trim();
+                if (message) {
+                    socket.send(message);
+                    messageInput.value = '';
+                    log('Sent: ' + message);
+                }
+            }
+        }
+        
+        connectBtn.onclick = connect;
+        disconnectBtn.onclick = disconnect;
+        sendBtn.onclick = sendMessage;
+        
+        messageInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        log('Page loaded. Click Connect to start.');
+    </script>
+</body>
+</html>
