@@ -1,0 +1,118 @@
+2025-09-03T10:46:18.421+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : Starting LogwatcherApplication using Java 21.0.6 with PID 256212 (D:\SpringBoot\logwatcher\target\classes started by Chinmay Tullu in D:\SpringBoot\logwatcher)
+2025-09-03T10:46:18.421+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-09-03T10:46:18.693+05:30  INFO 256212 --- [logwatcher] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-03T10:46:18.695+05:30  INFO 256212 --- [logwatcher] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-03T10:46:21.231+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-03T10:46:21.259+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-03T10:46:21.259+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03T10:46:21.371+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-03T10:46:21.371+05:30  INFO 256212 --- [logwatcher] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2676 ms
+2025-09-03T10:46:22.026+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-09-03T10:46:22.398+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-03T10:46:22.426+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-09-03T10:46:22.445+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@53c2bf07]]
+2025-09-03T10:46:22.445+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-09-03T10:46:22.506+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-03T10:46:22.530+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : Started LogwatcherApplication in 5.343 seconds (process running for 6.189)
+2025-09-03T10:46:31.271+05:30  INFO 256212 --- [logwatcher] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-03T10:46:31.271+05:30  INFO 256212 --- [logwatcher] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-03T10:46:31.271+05:30  INFO 256212 --- [logwatcher] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-09-03T10:47:22.446+05:30  INFO 256212 --- [logwatcher] [MessageBroker-7] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 6], outboundChannel[pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 10]
+2025-09-03T10:58:14.475+05:30  INFO 256212 --- [logwatcher] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-03T10:58:14.488+05:30  INFO 256212 --- [logwatcher] [Thread-6] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03T10:58:14.595+05:30  INFO 256212 --- [logwatcher] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-03T10:58:14.612+05:30  INFO 256212 --- [logwatcher] [Thread-6] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-09-03T10:58:14.615+05:30  INFO 256212 --- [logwatcher] [Thread-6] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@53c2bf07]]
+2025-09-03T10:58:14.630+05:30  INFO 256212 --- [logwatcher] [Thread-6] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-09-03T10:58:14.756+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : Starting LogwatcherApplication using Java 21.0.6 with PID 256212 (D:\SpringBoot\logwatcher\target\classes started by Chinmay Tullu in D:\SpringBoot\logwatcher)
+2025-09-03T10:58:14.759+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-09-03T10:58:15.071+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-03T10:58:15.071+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-03T10:58:15.071+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03T10:58:15.125+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-03T10:58:15.134+05:30  INFO 256212 --- [logwatcher] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 370 ms
+2025-09-03T10:58:15.345+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-03T10:58:15.354+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-09-03T10:58:15.354+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4226685f]]
+2025-09-03T10:58:15.354+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-09-03T10:58:15.362+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-03T10:58:15.366+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : Started LogwatcherApplication in 0.654 seconds (process running for 719.027)
+2025-09-03T10:58:15.374+05:30  INFO 256212 --- [logwatcher] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-03T10:58:19.849+05:30  INFO 256212 --- [logwatcher] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-03T10:58:19.849+05:30  INFO 256212 --- [logwatcher] [Thread-10] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03T10:58:19.904+05:30  INFO 256212 --- [logwatcher] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-03T10:58:19.909+05:30  INFO 256212 --- [logwatcher] [Thread-10] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-09-03T10:58:19.909+05:30  INFO 256212 --- [logwatcher] [Thread-10] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4226685f]]
+2025-09-03T10:58:19.909+05:30  INFO 256212 --- [logwatcher] [Thread-10] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-09-03T10:58:20.050+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : Starting LogwatcherApplication using Java 21.0.6 with PID 256212 (D:\SpringBoot\logwatcher\target\classes started by Chinmay Tullu in D:\SpringBoot\logwatcher)
+2025-09-03T10:58:20.050+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-09-03T10:58:20.313+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-03T10:58:20.313+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-03T10:58:20.313+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03T10:58:20.363+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-03T10:58:20.363+05:30  INFO 256212 --- [logwatcher] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 313 ms
+2025-09-03T10:58:20.509+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-03T10:58:20.509+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-09-03T10:58:20.509+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7e8de632]]
+2025-09-03T10:58:20.525+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-09-03T10:58:20.532+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-03T10:58:20.545+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : Started LogwatcherApplication in 0.529 seconds (process running for 724.205)
+2025-09-03T10:58:20.553+05:30  INFO 256212 --- [logwatcher] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-03T10:59:20.532+05:30  INFO 256212 --- [logwatcher] [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-09-03T11:00:16.441+05:30  INFO 256212 --- [logwatcher] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-03T11:00:16.445+05:30  INFO 256212 --- [logwatcher] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-03T11:00:16.449+05:30  INFO 256212 --- [logwatcher] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-09-03T11:01:29.567+05:30  INFO 256212 --- [logwatcher] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-03T11:01:29.582+05:30  INFO 256212 --- [logwatcher] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03T11:01:29.668+05:30  INFO 256212 --- [logwatcher] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-03T11:01:29.668+05:30  INFO 256212 --- [logwatcher] [Thread-15] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-09-03T11:01:29.677+05:30  INFO 256212 --- [logwatcher] [Thread-15] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7e8de632]]
+2025-09-03T11:01:29.678+05:30  INFO 256212 --- [logwatcher] [Thread-15] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-09-03T11:01:29.842+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : Starting LogwatcherApplication using Java 21.0.6 with PID 256212 (D:\SpringBoot\logwatcher\target\classes started by Chinmay Tullu in D:\SpringBoot\logwatcher)
+2025-09-03T11:01:29.842+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-09-03T11:01:30.250+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-03T11:01:30.250+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-03T11:01:30.250+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03T11:01:30.287+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-03T11:01:30.287+05:30  INFO 256212 --- [logwatcher] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 435 ms
+2025-09-03T11:01:31.018+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-03T11:01:31.034+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-09-03T11:01:31.043+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1446f64d]]
+2025-09-03T11:01:31.043+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-09-03T11:01:31.043+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-03T11:01:31.060+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : Started LogwatcherApplication in 1.291 seconds (process running for 914.717)
+2025-09-03T11:01:31.062+05:30  INFO 256212 --- [logwatcher] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-03T11:02:31.046+05:30  INFO 256212 --- [logwatcher] [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-09-03T11:02:31.350+05:30  INFO 256212 --- [logwatcher] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-03T11:02:31.350+05:30  INFO 256212 --- [logwatcher] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-03T11:02:31.350+05:30  INFO 256212 --- [logwatcher] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-09-03T11:02:59.855+05:30  INFO 256212 --- [logwatcher] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-03T11:02:59.864+05:30  INFO 256212 --- [logwatcher] [Thread-21] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03T11:02:59.932+05:30  INFO 256212 --- [logwatcher] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-03T11:02:59.934+05:30  INFO 256212 --- [logwatcher] [Thread-21] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-09-03T11:02:59.935+05:30  INFO 256212 --- [logwatcher] [Thread-21] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1446f64d]]
+2025-09-03T11:02:59.936+05:30  INFO 256212 --- [logwatcher] [Thread-21] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-09-03T11:03:00.236+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : Starting LogwatcherApplication using Java 21.0.6 with PID 256212 (D:\SpringBoot\logwatcher\target\classes started by Chinmay Tullu in D:\SpringBoot\logwatcher)
+2025-09-03T11:03:00.238+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-09-03T11:03:00.804+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-03T11:03:00.808+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-03T11:03:00.809+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03T11:03:00.857+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-03T11:03:00.859+05:30  INFO 256212 --- [logwatcher] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 616 ms
+2025-09-03T11:03:01.095+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-03T11:03:01.110+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-09-03T11:03:01.112+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@a9a411]]
+2025-09-03T11:03:01.114+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-09-03T11:03:01.137+05:30  INFO 256212 --- [logwatcher] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-03T11:03:01.146+05:30  INFO 256212 --- [logwatcher] [restartedMain] c.e.logwatcher.LogwatcherApplication     : Started LogwatcherApplication in 1.0 seconds (process running for 1004.803)
+2025-09-03T11:03:01.152+05:30  INFO 256212 --- [logwatcher] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-03T11:03:03.150+05:30  INFO 256212 --- [logwatcher] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-03T11:03:03.152+05:30  INFO 256212 --- [logwatcher] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-03T11:03:03.154+05:30  INFO 256212 --- [logwatcher] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-03T11:04:01.113+05:30  INFO 256212 --- [logwatcher] [MessageBroker-6] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 6], outboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 38], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 11]
+2025-09-03T11:07:01.055+05:30  INFO 256212 --- [logwatcher] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-03T11:07:01.068+05:30  INFO 256212 --- [logwatcher] [Thread-27] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03T11:07:01.129+05:30  INFO 256212 --- [logwatcher] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-03T11:07:01.131+05:30  INFO 256212 --- [logwatcher] [Thread-27] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-09-03T11:07:01.131+05:30  INFO 256212 --- [logwatcher] [Thread-27] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@a9a411]]
+2025-09-03T11:07:01.131+05:30  INFO 256212 --- [logwatcher] [Thread-27] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.

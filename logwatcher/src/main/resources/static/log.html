@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Log Viewer</title>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+</head>
+<body>
+    <h2>Live Log Viewer</h2>
+    <pre id="logArea" style="background:#111;color:#0f0;height:500px;overflow:auto;"></pre>
+
+    <script>
+        var socket = new SockJS('/ws-log');
+        var stompClient = Stomp.over(socket);
+        stompClient.connect({}, function(frame) {
+            console.log('Connected: ' + frame);
+            
+            // Subscribe to log updates
+            stompClient.subscribe('/topic/logs', function(message) {
+                var logArea = document.getElementById('logArea');
+                logArea.textContent += message.body + "\n";
+                logArea.scrollTop = logArea.scrollHeight;
+            });
+            
+            // Request initial log lines after connection is established
+            stompClient.send("/app/getInitialLogs", {}, {});
+        });
+    </script>
+</body>
+</html>
